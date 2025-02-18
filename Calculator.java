@@ -134,6 +134,11 @@ public class Calculator {
                                 displayLabel.setText(displayLabel.getText() + buttonValue);
                             }
                         }
+                        else if (buttonValue == "√"){
+                            double numDisplay = Double.parseDouble(displayLabel.getText());
+                            numDisplay = Math.sqrt(numDisplay);
+                            displayLabel.setText(removeZeroDecimal(numDisplay));
+                        }
                         else if ("0123456789".contains(buttonValue)) {
                             if (displayLabel.getText() == "0") {
                                 displayLabel.setText(buttonValue);
